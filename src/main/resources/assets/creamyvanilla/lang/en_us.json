@@ -1,0 +1,15 @@
+{
+  "block.creamyvanilla.sack": "Sack",
+  "container.creamyvanilla.sack": "Sack",
+  "effect.creamyvanilla.overencumbered": "Overencumbered",
+  "effect.creamyvanilla.overencumbered.description": "Prevents sprinting. Further levels reduce jump height and hinder walking speed respectively.",
+  "subtitles.creamyvanilla.sack.open": "Sack opened",
+  "tag.item.creamyvanilla.sacks": "Sacks",
+  "tag.block.creamyvanilla.sacks": "Sacks",
+  "tag.item.creamyvanilla.overencumbering": "Overencumbering",
+
+  "enchantment.creamyvanilla.harvesting": "Harvesting",
+
+  "attribute.creamyvanilla.fire_resistance": "Fire Resistance",
+  "attribute.creamyvanilla.looting": "Looting"
+}

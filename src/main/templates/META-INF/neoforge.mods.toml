@@ -1,0 +1,77 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="${mod_authors}"
+credits='''
+Creamy Vanilla is created and owned by Celestial878.
+
+The Sack is a fork of the sack from Supplementaries by MehVahdJukaar (and Plantkillable): its code and art were used directly. https://www.curseforge.com/minecraft/mc-mods/supplementaries
+
+The right-click harvesting action uses code originally from Harvest with Ease by Crystal Nest (the Harvesting enchantment itself is original). https://modrinth.com/mod/harvest-with-ease
+'''
+description='''
+Creamy Vanilla by Celestial878 - small vanilla-friendly additions in one mod:
+
+- Sack: a placeable, waterlogging, falling container that keeps its contents when broken, with an Overencumbered penalty for carrying too many. Forked from the sack in Supplementaries.
+- Harvesting: a hoe enchantment that lets you right-click mature crops to harvest and replant them. Harvesting action based on Harvest with Ease.
+- Looting attribute: a creamyvanilla:looting item attribute that grants extra Looting levels while held.
+- Fire Resistance attribute: a creamyvanilla:fire_resistance attribute that reduces fire damage (requires Puffish Attributes).
+- Keep Hotbar Gear: on death you keep your hotbar, armor, offhand and Curios; the main inventory drops (and goes into Corpse / Gravestone graves). Needs keepInventory OFF.
+- HUD Shift: client-side fix that shifts AppleSkin and Toughness Bar HUD layers to line up with the vanilla bars.
+
+Credits: Supplementaries by MehVahdJukaar (sack code and art) and Harvest with Ease by Crystal Nest (harvesting action).
+'''
+
+[[mixins]]
+config="${mod_id}.mixins.json"
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+# Fire Resistance attribute is only enabled when Puffish Attributes is installed.
+[[dependencies.${mod_id}]]
+    modId="puffish_attributes"
+    type="optional"
+    versionRange="[0.8.3,)"
+    ordering="AFTER"
+    side="BOTH"
+
+# Sack contents preview in item tooltips.
+[[dependencies.${mod_id}]]
+    modId="shulkerboxtooltip"
+    type="optional"
+    versionRange="[5,)"
+    ordering="NONE"
+    side="BOTH"
+
+# Harvesting enchantment also works on Farmer's Delight crops (tomatoes, cabbages, onions, rice).
+[[dependencies.${mod_id}]]
+    modId="farmersdelight"
+    type="optional"
+    versionRange="[1.3,)"
+    ordering="AFTER"
+    side="BOTH"
+
+# Keep Hotbar Gear also keeps Curios when Curios is installed.
+[[dependencies.${mod_id}]]
+    modId="curios"
+    type="optional"
+    versionRange="[9.0.0,)"
+    ordering="NONE"
+    side="BOTH"

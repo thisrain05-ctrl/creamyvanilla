@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "open=false": { "model": "creamyvanilla:block/sack_closed" },
+    "open=true":  { "model": "creamyvanilla:block/sack_open" }
+  }
+}
